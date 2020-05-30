@@ -1,13 +1,12 @@
 {
   "name": "vuetify-daterange-picker",
-  "version": "3.2.0",
+  "version": "3.3.1",
   "author": {
     "email": "praveenpuglia@gmail.com",
     "name": "Praveen Puglia",
     "url": "https://praveenpuglia.com"
   },
   "main": "./dist/vuetify-daterange-picker.common.js",
-  "repository": "https://github.com/praveenpuglia/vuetify-daterange-picker",
   "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -27,28 +26,31 @@
   "peerDependencies": {
     "date-fns": "^2.8.1",
     "vue": "^2.6.10",
-    "vuetify": "^1.5.14"
+    "vuetify": "^2.2.22"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.4.0",
-    "@vue/cli-plugin-eslint": "^3.4.0",
-    "@vue/cli-plugin-unit-mocha": "^3.4.0",
-    "@vue/cli-service": "^3.4.0",
-    "@vue/eslint-config-prettier": "^4.0.1",
+    "@vue/cli-plugin-babel": "^4.4.1",
+    "@vue/cli-plugin-eslint": "^4.4.1",
+    "@vue/cli-plugin-unit-mocha": "^4.4.1",
+    "@vue/cli-service": "^4.4.1",
+    "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/test-utils": "^1.0.0-beta.20",
     "babel-eslint": "^10.0.1",
     "chai": "^4.1.2",
     "date-fns": "^2.8.1",
-    "eslint": "^5.8.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "lint-staged": "^8.1.0",
+    "deepmerge": "^4.2.2",
+    "eslint": "^7.1.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "fibers": "^5.0.0",
+    "lint-staged": "^10.2.7",
+    "sass": "^1.26.7",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
     "vue": "^2.6.10",
-    "vue-cli-plugin-vuetify": "^0.4.6",
-    "vue-template-compiler": "2.6.10",
-    "vuetify": "^1.5.14",
-    "vuetify-loader": "^1.0.5"
+    "vue-cli-plugin-vuetify": "^2.0.5",
+    "vue-template-compiler": "2.6.11",
+    "vuetify": "^2.2.22",
+    "vuetify-loader": "^1.4.4"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
@@ -62,5 +64,15 @@
       "vue-cli-service lint",
       "git add"
     ]
+  },
+  "dependencies": {
+    "sass-loader": "^8.0.2",
+    "vue-router": "^3.3.2"
+  },
+  "repository": {
+    "url": "git://github.com/believe2013/vuetify-daterange-picker.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
