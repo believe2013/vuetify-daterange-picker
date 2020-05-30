@@ -1,5 +1,5 @@
 {
-  "name": "vuetify-daterange-picker",
+  "name": "@believe2013/vuetify-daterange-picker",
   "version": "3.3.1",
   "author": {
     "email": "praveenpuglia@gmail.com",
@@ -70,9 +70,7 @@
     "vue-router": "^3.3.2"
   },
   "repository": {
+    "type": "git",
     "url": "git://github.com/believe2013/vuetify-daterange-picker.git"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   }
 }

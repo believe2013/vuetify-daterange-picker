@@ -1,17 +1,17 @@
 <template>
-  <div id="app">
+  <div>
     <v-app>
       <v-content>
         <v-container>
           {{ range }}
           <v-daterange
-            v-model="range"
-            display-format="dd-MM-yyyy"
-            no-title
-            :input-props="inputProps"
-            :menu-props="menuProps"
-            :presets="presets"
-            :action-labels="{ apply: 'Custom Apply' }"
+                  v-model="range"
+                  display-format="dd-MM-yyyy"
+                  no-title
+                  :input-props="inputProps"
+                  :menu-props="menuProps"
+                  :presets="presets"
+                  :action-labels="{ apply: 'Custom Apply' }"
           >
             <h3 slot="title">Vuetify Dater Range Picker - Next</h3>
           </v-daterange>

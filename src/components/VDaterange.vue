@@ -6,15 +6,18 @@
       offset-y
       v-bind="menuProps"
     >
-      <v-text-field
-        slot="activator"
-        class="v-date-range__input-field"
-        :value="inputValue"
-        readonly
-        :disabled="disabled"
-        :placeholder="placeholder"
-        v-bind="inputProps"
-      ></v-text-field>
+      <template v-slot:activator="{on}">
+        <v-text-field
+          slot="activator"
+          class="v-date-range__input-field"
+          :value="inputValue"
+          readonly
+          :disabled="disabled"
+          :placeholder="placeholder"
+          v-bind="inputProps"
+          v-on="on"
+        ></v-text-field>
+      </template>
       <v-card class="v-date-range__menu-content">
         <v-card-text>
           <div
@@ -31,16 +34,16 @@
               <div class="v-date-range__content">
                 <v-list v-if="!noPresets" class="mr-4">
                   <v-subheader>{{ presetLabel }}</v-subheader>
-                  <v-list-tile
+                  <v-list-item-title
                     v-for="(preset, index) in presets"
                     v-model="isPresetActive[index]"
                     :key="index"
                     @click="selectPreset(index)"
                   >
-                    <v-list-tile-content>
+                    <v-list-item-content>
                       {{ preset.label }}
-                    </v-list-tile-content>
-                  </v-list-tile>
+                    </v-list-item-content>
+                  </v-list-item-title>
                 </v-list>
                 <v-date-picker
                   class="mr-4 v-date-range__picker--start v-date-range__picker"
@@ -74,8 +77,8 @@
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn flat @click="reset">{{ mergedActionLabels.reset }}</v-btn>
-          <v-btn flat @click="menu = false">{{
+          <v-btn text @click="reset">{{ mergedActionLabels.reset }}</v-btn>
+          <v-btn text @click="menu = false">{{
             mergedActionLabels.cancel
           }}</v-btn>
           <v-btn
@@ -340,6 +343,8 @@ export default {
   }
 };
 </script>
+
+
 <style scoped lang="stylus">
 .v-date-range__input-field >>> input {
   text-align: center;
